@@ -1,7 +1,6 @@
 ---
 title: get p-values for the effect of estimated mmse score using a paired t-test (one sample t-test on differences)
 notebook: EDA_MMSE.ipynb
-nav_include: 3
 ---
 
 ## Contents
@@ -305,7 +304,7 @@ display(demographic.head())
     </tr>
   </tbody>
 </table>
-<p>5 rows ?? 2150 columns</p>
+<p>5 rows × 2150 columns</p>
 </div>
 
 
@@ -431,41 +430,6 @@ display(demographic.head())
 
 
 
-```python
-fig1 = plt.figure(figsize = [15,15])
-
-
-plt.subplot(2,2,1)
-ax = plt.gca()
-data.boxplot('MMSE',by = ['DX.bl'], ax = ax)
-plt.title('Fig. 1a: MMSE by Diagnosis')
-plt.xlabel('Diagnosis')
-plt.ylabel('MMSE')
-
-plt.subplot(2,2,2)
-ax = plt.gca()
-data.boxplot('MMSE',by = ['APOE4'], ax = ax)
-plt.title('Fig. 1b: MMSE by Apoe4 allele number')
-plt.xlabel('Apoe4 allele number')
-plt.ylabel('MMSE')
-
-plt.subplot(2,2,3)
-ax = plt.gca()
-data.boxplot('MMSE',by = ['PTGENDER'], ax = ax)
-plt.title('Fig. 1c: MMSE by Gender')
-plt.xlabel('Gender')
-plt.ylabel('MMSE')
-
-plt.subplot(2,2,4)
-ax = plt.gca()
-plt.scatter(data['AGE'],mmse,alpha=0.3)
-plt.title('Fig. 1d: MMSE by Age')
-plt.xlabel('Age')
-plt.ylabel('MMSE');
-
-
-fig1.suptitle('Fig. 1: EDA of MMSE Scores with Respect to Diagnosis and Demographic Factors',fontsize= 30);
-```
 
 
 
@@ -481,21 +445,6 @@ We now try to find the features in the imaging data that are most correlated wit
 
 
 
-```python
-
-corr_coefs = []
-pvals = []
-
-for column in image_data.columns.values:
-    coef,pval = pearsonr(image_data[column],mmse)
-    corr_coefs.append(coef)
-    pvals.append(pval)
-    
-print("image measurements most closely correlated with mmse score:")
-best6 = image_data.columns.values[np.argsort(pvals)[:6]]
-print(best6)
-
-```
 
 
     image measurements most closely correlated with mmse score:

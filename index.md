@@ -2,14 +2,4 @@
 title: CS109a Final Project: Alzheimer's Disease Dataset
 ---
 
-This is the home page
-
-## Lets have fun
-
->here is a quote
-
-Here is *emph* and **bold**.
-
-Here is some inline math $\alpha = \frac{\beta}{\gamma}$ and, of-course, E rules:
-
-$$ G_{\mu\nu} + \Lambda g_{\mu\nu}  = 8 \pi T_{\mu\nu} . $$
+Introduction is blank for the moment

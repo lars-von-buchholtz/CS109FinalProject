@@ -22,6 +22,8 @@ nav_include: 2
 
 
 
+## EDA of MMSE and demographic factors
+  
 We downloaded the data for this part of the analysis from the [ADNI download page]( https://ida.loni.usc.edu/pages/access/studyData.jsp?categoryId=43&subCategoryId=94) (password-protected login).  
 The data in the baseline_data.csv file consists of 628 rows corresponding to unique observations of 628 patients. It contains 2150 measurements of brain geometry derived from 3D MRI images, e.g. area, thickness, curvature, etc. of different brain regions. It can be assumed that many of these variables are correlated with each other because of geometrical necessity.  
 The spreadsheet also contains demographic data such as education, ethnicity, gender, race and age as well as some diagnostic data: MMSE score, Diagnosis, Apoe4 genotype. The Apoe4 allele is a polymorphism of the Apo E gene that is associated with AD susceptibility. In addition, there is an indicator variable for Apoe4 imputation.    
@@ -45,6 +47,9 @@ On the other hand, other demographic predictors like gender or age do not appear
 ![png](EDA_MMSE_files/EDA_MMSE_7_0.png)
 
 
+## EDA of MMSE and demographic factors
+  
+  
 Furthermore, we managed to determine the predictors in the imaging dataset that have the highest Pearson’s correlation coefficient with the MMSE score and plotted them against the MMSE score.
 
 
